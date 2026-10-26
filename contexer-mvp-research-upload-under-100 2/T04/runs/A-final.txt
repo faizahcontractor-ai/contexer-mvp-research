@@ -1,0 +1,9 @@
+Implemented `normalize_service_url` in [url_normalization.py](/Users/faizahcontractor/Documents/contexer-mvp-lab/T04/condition-a/url_normalization.py).
+
+It removes exactly one path-ending slash while preserving query strings, fragments, URL spelling, and avoiding network access. Added coverage for empty query markers and unchanged paths in [tests/test_url_normalization.py](/Users/faizahcontractor/Documents/contexer-mvp-lab/T04/condition-a/tests/test_url_normalization.py).
+
+Verified with:
+
+```bash
+python3 -m unittest discover -v
+```

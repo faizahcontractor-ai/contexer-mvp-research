@@ -1,0 +1,44 @@
+diff -ru --exclude=.git /Users/faizahcontractor/Documents/contexer-mvp-lab/T04/starter/tests/test_url_normalization.py /Users/faizahcontractor/Documents/contexer-mvp-lab/T04/condition-a/tests/test_url_normalization.py
+--- /Users/faizahcontractor/Documents/contexer-mvp-lab/T04/starter/tests/test_url_normalization.py	2026-10-26 19:21:18
++++ /Users/faizahcontractor/Documents/contexer-mvp-lab/T04/condition-a/tests/test_url_normalization.py	2026-10-26 19:29:52
+@@ -29,6 +29,18 @@
+         "https://example.test/v1/items#section/",
+         "https://example.test/v1/items#section/",
+     ),
++    (
++        "https://example.test/v1/items?",
++        "https://example.test/v1/items?",
++    ),
++    (
++        "https://example.test/v1/items/?",
++        "https://example.test/v1/items?",
++    ),
++    (
++        "https://example.test/v1/items",
++        "https://example.test/v1/items",
++    ),
+ )
+ 
+ 
+diff -ru --exclude=.git /Users/faizahcontractor/Documents/contexer-mvp-lab/T04/starter/url_normalization.py /Users/faizahcontractor/Documents/contexer-mvp-lab/T04/condition-a/url_normalization.py
+--- /Users/faizahcontractor/Documents/contexer-mvp-lab/T04/starter/url_normalization.py	2026-10-26 19:20:05
++++ /Users/faizahcontractor/Documents/contexer-mvp-lab/T04/condition-a/url_normalization.py	2026-10-26 19:29:52
+@@ -3,4 +3,17 @@
+ 
+ def normalize_service_url(url: str) -> str:
+     """Normalize a service URL without making a network request."""
+-    raise NotImplementedError("Implement T04")
++    # A query string or fragment can itself end in a slash, so only inspect
++    # the portion before their separators.  Working on the original string
++    # also avoids changing unrelated URL spelling (for example, an empty
++    # query marker or the casing of the scheme/host).
++    path_end = len(url)
++    for separator in "?#":
++        position = url.find(separator)
++        if position != -1:
++            path_end = min(path_end, position)
++
++    if path_end and url[path_end - 1] == "/":
++        return url[: path_end - 1] + url[path_end:]
++
++    return url
