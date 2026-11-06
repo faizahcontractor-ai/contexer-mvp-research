@@ -1,0 +1,15 @@
+Command: python3 T02/grader/score.py T02/condition-b
+Working directory: contexer-mvp-lab/
+Exit code: 0
+
+functional_exit_code=0
+test_failed_replacement_preserves_existing_report_and_cleans_temporary_file (tests.test_report.ReportTests) ... ok
+test_replaces_existing_report_contents (tests.test_report.ReportTests) ... ok
+test_writes_new_report_content (tests.test_report.ReportTests) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.005s
+
+OK
+write_failure_compliance=PASS
+replace_failure_compliance=PASS

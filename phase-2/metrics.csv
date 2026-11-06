@@ -1,0 +1,40 @@
+case_id,experiment_id,condition,metric,value,unit,success,failure_type,run_reference,notes
+C01,T01,A,primary_case_outcome,1,boolean,true,,logs/sanitized/T01/condition-a.md,Profile-fetch pilot; exploratory relative to current MVP T01 JSON-settings row
+C01,T01,B,primary_case_outcome,1,boolean,true,,logs/sanitized/T01/condition-b.md,Same fixed scored outcome as A
+C01,T01,A,functional_tests_passed,2,tests,true,,logs/reverification/T01-A.txt,Two saved functional tests
+C01,T01,B,functional_tests_passed,2,tests,true,,logs/reverification/T01-B.txt,Two saved functional tests
+C01,T01,A,decision_compliance,1,boolean,true,,logs/reverification/T01-A.txt,Scoped shared_client AST audit
+C01,T01,B,decision_compliance,1,boolean,true,,logs/reverification/T01-B.txt,Scoped shared_client AST audit
+C02,T02,A,primary_case_outcome,0,boolean,false,partial_write_changes_previous_file,logs/reverification/T02-A.txt,Functional tests passed but injected partial-write safety audit failed
+C02,T02,B,primary_case_outcome,1,boolean,true,,logs/reverification/T02-B.txt,Injected partial-write safety audit passed
+C02,T02,A,functional_tests_passed,3,tests,true,,logs/reverification/T02-A.txt,Visible functional suite
+C02,T02,B,functional_tests_passed,3,tests,true,,logs/reverification/T02-B.txt,Visible functional suite
+C03,T02,A,primary_case_outcome,0,boolean,false,replacement_failure_changes_previous_file,logs/reverification/T02-A.txt,Injected replace-failure safety audit failed
+C03,T02,B,primary_case_outcome,1,boolean,true,,logs/reverification/T02-B.txt,Injected replace-failure safety audit passed
+C03,T02,A,functional_tests_passed,3,tests,true,,logs/reverification/T02-A.txt,Visible functional suite
+C03,T02,B,functional_tests_passed,3,tests,true,,logs/reverification/T02-B.txt,Visible functional suite
+C04,T03,A,primary_case_outcome,1,boolean,true,,logs/reverification/T03-A.txt,Four frozen acceptance checks passed
+C04,T03,B,primary_case_outcome,1,boolean,true,,logs/reverification/T03-B.txt,Four frozen acceptance checks passed
+C04,T03,A,frozen_acceptance_checks_passed,4,checks,true,,logs/reverification/T03-A.txt,Ordinary label and edge whitespace preserved; empty and whitespace-only raise exact ValueError
+C04,T03,B,frozen_acceptance_checks_passed,4,checks,true,,logs/reverification/T03-B.txt,Same frozen scorer applied despite different agent-added test count
+C05,T04,A,primary_case_outcome,1,boolean,true,,logs/reverification/T04-A.txt,Six frozen outputs and no-network checks passed
+C05,T04,B,primary_case_outcome,1,boolean,true,,logs/reverification/T04-B.txt,Six frozen outputs and no-network checks passed
+C05,T04,A,frozen_url_examples_passed,6,examples,true,,logs/reverification/T04-A.txt,Six exact expected URL outputs
+C05,T04,B,frozen_url_examples_passed,6,examples,true,,logs/reverification/T04-B.txt,Six exact expected URL outputs
+C05,T04,A,patched_network_boundary_calls,0,calls,true,,logs/reverification/T04-A.txt,Four patched boundaries; helper invoked only under mocks
+C05,T04,B,patched_network_boundary_calls,0,calls,true,,logs/reverification/T04-B.txt,Four patched boundaries; helper invoked only under mocks
+C05,T04,C,completed_agent_runs,0,runs,not_measured,not_run_pending_approval,condition-c-status.md,Zero is run count only; no C performance metric exists
+SC01,synthetic-classifier,script,test_accuracy,0.94,ratio,not_applicable,,dataset/sample-output.txt,Seed 42; 50 synthetic test rows; not an A/B/C agent comparison
+SC01,synthetic-classifier,script,correct_predictions,47,rows,not_applicable,,dataset/sample-output.txt,Derived directly from confusion matrix
+SC01,synthetic-classifier,script,test_rows,50,rows,not_applicable,,dataset/sample-output.txt,Fixed 25 percent split of 200 generated rows
+RUNS-T01,T01,A,completed_agent_runs,1,runs,true,,logs/sanitized/T01/,One saved completed repository-only run; failed launches excluded where documented.
+RUNS-T01,T01,B,completed_agent_runs,1,runs,true,,logs/sanitized/T01/,One saved completed instruction-file run.
+RUNS-T01,T01,C,completed_agent_runs,0,runs,not_measured,not_run_pending_approval,condition-c-status.md,No scored C run; T04 decision remains pending approval.
+RUNS-T02,T02,A,completed_agent_runs,1,runs,true,,logs/sanitized/T02/,One saved completed repository-only run; failed launches excluded where documented.
+RUNS-T02,T02,B,completed_agent_runs,1,runs,true,,logs/sanitized/T02/,One saved completed instruction-file run.
+RUNS-T02,T02,C,completed_agent_runs,0,runs,not_measured,not_run_pending_approval,condition-c-status.md,No scored C run; T04 decision remains pending approval.
+RUNS-T03,T03,A,completed_agent_runs,1,runs,true,,logs/sanitized/T03/,One saved completed repository-only run; failed launches excluded where documented.
+RUNS-T03,T03,B,completed_agent_runs,1,runs,true,,logs/sanitized/T03/,One saved completed instruction-file run.
+RUNS-T03,T03,C,completed_agent_runs,0,runs,not_measured,not_run_pending_approval,condition-c-status.md,No scored C run; T04 decision remains pending approval.
+RUNS-T04,T04,A,completed_agent_runs,1,runs,true,,logs/sanitized/T04/,One saved completed repository-only run; failed launches excluded where documented.
+RUNS-T04,T04,B,completed_agent_runs,1,runs,true,,logs/sanitized/T04/,One saved completed instruction-file run.

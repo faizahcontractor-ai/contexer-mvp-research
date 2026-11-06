@@ -1,0 +1,5 @@
+Command: python3 dataset/sample_analysis.py
+Exit code: 1
+Result: unable to run because system Python has no pandas; no dependencies were installed.
+
+ModuleNotFoundError: No module named pandas

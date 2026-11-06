@@ -1,0 +1,50 @@
+# Sanitization manifest
+
+Original and sanitized SHA-256 hashes. Local paths, email-shaped strings, session UUIDs, personal names, and credential-like assignments are redacted in the copies. Source records are unchanged.
+
+| Source (lab-relative) | Sanitized copy | Original SHA-256 | Sanitized SHA-256 |
+|---|---|---|---|
+| `README.md` | `evidence/source-records/lab-README.md` | `20ee13add17d9c093151ea2230831cc42e441f9f104497e33fa3ec51d4c78afd` | `20ee13add17d9c093151ea2230831cc42e441f9f104497e33fa3ec51d4c78afd` |
+| `RUN-PROTOCOL.md` | `evidence/source-records/RUN-PROTOCOL.md` | `a448a4e32f0dc95145a760273c3f64a5c81e298c7358416736440c9ba28ba47b` | `a448a4e32f0dc95145a760273c3f64a5c81e298c7358416736440c9ba28ba47b` |
+| `results/T01-results.md` | `evidence/source-records/T01/results.md` | `b6a095ea19f055b56e99c3b5883488eb02cfc18ffbb5b426d170d691b3ff855d` | `b6a095ea19f055b56e99c3b5883488eb02cfc18ffbb5b426d170d691b3ff855d` |
+| `results/starter-manifest.txt` | `evidence/source-records/T01/starter-manifest.txt` | `7e1c8cb88d19411f158bca3acbd1cb4f50f328f136f1e5e3bdf48c591e95592a` | `7e1c8cb88d19411f158bca3acbd1cb4f50f328f136f1e5e3bdf48c591e95592a` |
+| `T02/T02-PREREGISTRATION.md` | `evidence/source-records/T02/preregistration.md` | `8bf38e52515680f4f4a25f4522d5c5db7ce62a9951134900b91c8bb3051a615a` | `8bf38e52515680f4f4a25f4522d5c5db7ce62a9951134900b91c8bb3051a615a` |
+| `T02/fixture-validation.md` | `evidence/source-records/T02/fixture-validation.md` | `4281cc764282a660adae45ebf2fad4bcf2505667c6ff2245c69f4d37a84862d2` | `cd0a6513fac0046a29ec10233540ef6fddc42f847fb76636965594cbc9987248` |
+| `T02/results/T02-results.md` | `evidence/source-records/T02/results.md` | `b0e89ea39725ee540c794176cde93f6085c0eb57322a38559da8c2c85177886f` | `b0e89ea39725ee540c794176cde93f6085c0eb57322a38559da8c2c85177886f` |
+| `T03/T03-PREREGISTRATION.md` | `evidence/source-records/T03/preregistration.md` | `cdf5748bf394519c084807f1aa37f8f5feb29f9d17a26195814aead0a7991fa8` | `cdf5748bf394519c084807f1aa37f8f5feb29f9d17a26195814aead0a7991fa8` |
+| `T03/fixture-validation.md` | `evidence/source-records/T03/fixture-validation.md` | `dda854385cefb8aa4ee89d66fca0e5e8dc3f384a71e86a1da970f430de1ee8b1` | `dda854385cefb8aa4ee89d66fca0e5e8dc3f384a71e86a1da970f430de1ee8b1` |
+| `T03/results/T03-results.md` | `evidence/source-records/T03/results.md` | `96aa67b6b67340803c958fea4e0917d3773bc44a82d1f8f6177bbe516c10ee48` | `ce2e9d32bbacfe5ae30acd7b94d82b43d2bf947c9282d2f77dcce4b4d67fb443` |
+| `T04/T04-PREREGISTRATION.md` | `evidence/source-records/T04/preregistration.md` | `a578902eeac5c353bdd26e9e7379817f4054171992d84c688963f6c029b227ad` | `a578902eeac5c353bdd26e9e7379817f4054171992d84c688963f6c029b227ad` |
+| `T04/fixture-validation.md` | `evidence/source-records/T04/fixture-validation.md` | `ded3d6379f4a255ccd87c8c497101533ef2b5a7e140996cbabeb6c0677184cae` | `ccca163f77c5079ebcbe88f8385c93dee52fdae1da75ea50000942d907e8d9af` |
+| `T04/T04-RESULTS.md` | `evidence/source-records/T04/results.md` | `d39f09eed4b2eee315f3b3080cef88d945617daace25390a8d134a0c5d92e406` | `d39f09eed4b2eee315f3b3080cef88d945617daace25390a8d134a0c5d92e406` |
+| `runs/condition-a.md` | `logs/sanitized/T01/condition-a.md` | `ffeef3ebc32ffd6ef7c088de2c1277669acea4cc35cd1d316baa0bf5c27f904f` | `151c70d7818dfdd93e5f8f688bd7d6ebba87ae8bde5995355e17bae91abd7545` |
+| `runs/condition-b.md` | `logs/sanitized/T01/condition-b.md` | `a4d9e41cffa59d2a21a6f4f7db9f48e80c83ff5cdd53227facee3439516a9407` | `d51eb64a84ab7f343ac1b275d815127056bb7151e4d73aeb2e1add88d6f2de04` |
+| `T02/runs/condition-a.md` | `logs/sanitized/T02/condition-a.md` | `0b518e77e7ef43849f299b345ca32cd4bad2aed824d964f359486c0d97bcf2f2` | `4614c36eab8cf0811ee68d9ca96095d933f1e3880facbf1a82b2927b16d42dff` |
+| `T02/runs/condition-a.patch` | `logs/sanitized/T02/condition-a.patch` | `f85fd9ff0619f11a5060fbfb346943c7089590e20fe98ec0fa81a1506c209f4f` | `f85fd9ff0619f11a5060fbfb346943c7089590e20fe98ec0fa81a1506c209f4f` |
+| `T03/runs/condition-a.md` | `logs/sanitized/T03/condition-a.md` | `428a3969da0ae1a168ca943b6ed44fd46afa310cc7ba4535f618d6ac9f04acfd` | `73c01afdebb7c8cea44d91e020b13cae64d8368bffa58cff6917fb0dda1c5164` |
+| `T03/runs/condition-a.patch` | `logs/sanitized/T03/condition-a.patch` | `85b3f1b2b2d8eee307ddb28ad2aefd7714a75292b4b1d4bdd86da0a0d6abe5c9` | `85b3f1b2b2d8eee307ddb28ad2aefd7714a75292b4b1d4bdd86da0a0d6abe5c9` |
+| `T03/runs/condition-a-transcript.json` | `logs/sanitized/T03/condition-a-transcript.json` | `ab86f1bc60892cd4758ed18c471e8973bdd64c1ab64fab74a4067d77fbb47f73` | `6b0662adda8f7118f460dd0be372ad8c1103c9aa73d8175d1426ae2e305060a6` |
+| `T02/runs/condition-b.md` | `logs/sanitized/T02/condition-b.md` | `f7065fdc00adfdfd923adc40faf03b805464ddfb63daa83eaec3af841a4c5d0d` | `b8a09f99374119250781fcca95630ff527cf9d8a439f8934e8d012d1936fae67` |
+| `T02/runs/condition-b.patch` | `logs/sanitized/T02/condition-b.patch` | `21c58fe931a0c92f1826156694630a4a9d6a4b9c4813c361e613776b010b4b0d` | `21c58fe931a0c92f1826156694630a4a9d6a4b9c4813c361e613776b010b4b0d` |
+| `T03/runs/condition-b.md` | `logs/sanitized/T03/condition-b.md` | `59f83a71d952a9d494aec7565c8260d4023a56f1248ee72d91a4d868aea8c8b0` | `d0fe0f3136e00cde7f1dfe43696b6341d483a2aa5f0501e10ed7283a7cb7b312` |
+| `T03/runs/condition-b.patch` | `logs/sanitized/T03/condition-b.patch` | `88fc813045f53143d7e127cb03191e0a6ad5be437eaed9dcef34bfddb64e922f` | `88fc813045f53143d7e127cb03191e0a6ad5be437eaed9dcef34bfddb64e922f` |
+| `T03/runs/condition-b-transcript.json` | `logs/sanitized/T03/condition-b-transcript.json` | `956906964c17f0da048f98beeedc327d8d400d2ad07e817913dba3624c33593f` | `6c48e7e6c24358c693e5a8fb3ad8f2ffa99bd6430f621e877601a1dcb52b70a1` |
+| `T04/runs/A-agent-exit-code.txt` | `logs/sanitized/T04/A-agent-exit-code.txt` | `9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa` | `9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa` |
+| `T04/runs/A-code-diff.patch` | `logs/sanitized/T04/A-code-diff.patch` | `327df8d8ce53bac5942031807f6b92f23687ebc515c6dec9568ead4716f730c4` | `614d011447effedbac73b0e61141f7ce212d74843e753f0f54ad41e7dc0410d2` |
+| `T04/runs/A-final.txt` | `logs/sanitized/T04/A-final.txt` | `41719b5b53477f43f50de9bc3a79fd4112ab7c0a935e115696e432370bbecb0d` | `ed75f268f30a5b6b2dc2e21d40e71684d5cf821a19e3d5f8bd867a5b183be6fa` |
+| `T04/runs/A-grader-exit-code.txt` | `logs/sanitized/T04/A-grader-exit-code.txt` | `9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa` | `9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa` |
+| `T04/runs/A-grader.txt` | `logs/sanitized/T04/A-grader.txt` | `4dc3ceeb33dc65949b90da42190090ceddfa055fef60898bdd400fe3ca94a49f` | `4dc3ceeb33dc65949b90da42190090ceddfa055fef60898bdd400fe3ca94a49f` |
+| `T04/runs/A-run-record.md` | `logs/sanitized/T04/A-run-record.md` | `3a73932eae9f5c50a4a3b0c2c4ee933d9e34a896df3c0547a2460bbb7f4ed1c4` | `1e72da5f1e9134a691c6a600f0bd24613b8f884047c87d372133a10151cf47cd` |
+| `T04/runs/A-tests-exit-code.txt` | `logs/sanitized/T04/A-tests-exit-code.txt` | `9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa` | `9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa` |
+| `T04/runs/A-tests.txt` | `logs/sanitized/T04/A-tests.txt` | `5531a20b6e772356f55e1709e9899f9dc595de6712c6ce7e0c86fdb3f4204469` | `5531a20b6e772356f55e1709e9899f9dc595de6712c6ce7e0c86fdb3f4204469` |
+| `T04/runs/A-transcript.jsonl` | `logs/sanitized/T04/A-transcript.jsonl` | `83aedfcac59ebb3d9eb6d65dd61fef48204780a6c31580be290af1c707dae5bc` | `f9e88244a1e22ee0387f8cb5a282cf471c3df677586bcf8919fcd8ad41a4856f` |
+| `T04/runs/B-agent-exit-code.txt` | `logs/sanitized/T04/B-agent-exit-code.txt` | `9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa` | `9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa` |
+| `T04/runs/B-code-diff.patch` | `logs/sanitized/T04/B-code-diff.patch` | `26628318404c44aa05c7aadeaa5c1f8dc3eb56db348587bb2b2b0801c0a1c900` | `8bc63c7c7636712e1c42e1b5179bed3aa064fb95ea293c0ae58bf58d33af0505` |
+| `T04/runs/B-final.txt` | `logs/sanitized/T04/B-final.txt` | `d2c65efc6d03ba174653a8ee7fc7aa7ca02a1c03386b0ccfb583de6c46445e15` | `d2c65efc6d03ba174653a8ee7fc7aa7ca02a1c03386b0ccfb583de6c46445e15` |
+| `T04/runs/B-grader-exit-code.txt` | `logs/sanitized/T04/B-grader-exit-code.txt` | `9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa` | `9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa` |
+| `T04/runs/B-grader.txt` | `logs/sanitized/T04/B-grader.txt` | `4dc3ceeb33dc65949b90da42190090ceddfa055fef60898bdd400fe3ca94a49f` | `4dc3ceeb33dc65949b90da42190090ceddfa055fef60898bdd400fe3ca94a49f` |
+| `T04/runs/B-run-record.md` | `logs/sanitized/T04/B-run-record.md` | `966345f51c0da7f5fbc76a7be9710513e9dbb00da57a85fee19c3bbf18fc1c96` | `cc7c283d69b403d94efb31240aef6f4a259eb5c25a5d3ac705c11ecd772d37b7` |
+| `T04/runs/B-tests-exit-code.txt` | `logs/sanitized/T04/B-tests-exit-code.txt` | `9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa` | `9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa` |
+| `T04/runs/B-tests.txt` | `logs/sanitized/T04/B-tests.txt` | `5531a20b6e772356f55e1709e9899f9dc595de6712c6ce7e0c86fdb3f4204469` | `5531a20b6e772356f55e1709e9899f9dc595de6712c6ce7e0c86fdb3f4204469` |
+| `T04/runs/B-transcript.jsonl` | `logs/sanitized/T04/B-transcript.jsonl` | `f695753a6f806aa6ff4564561d2f6a481770926bd54f3f8ce50f318134cda780` | `9777150094be8f83f3d381dc63df716bb8e48d7183e856dc668bc7d9f11bb81d` |
+| `T04/runs/launch-attempts.md` | `logs/sanitized/T04/launch-attempts.md` | `3c8ea73945e469a273d43dc7afd09cf09fa9a37a30b591132ca66447b2105e84` | `d79682f8268781ee80b938e7380c2f0099cccd1396622c0f68e4b7ae9df5ca04` |

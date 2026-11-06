@@ -1,0 +1,34 @@
+--- ../starter/label_validation.py	2026-10-26 18:21:29
++++ label_validation.py	2026-10-26 18:35:27
+@@ -3,4 +3,8 @@
+ 
+ def validate_label(label: str) -> str:
+     """Validate and return a user-supplied label."""
+-    raise NotImplementedError("Implement T03")
++    if not isinstance(label, str):
++        raise TypeError("label must be a string")
++    if not label.strip():
++        raise ValueError("label must not be blank")
++    return label
+--- ../starter/tests/test_label_validation.py	2026-10-26 18:21:29
++++ tests/test_label_validation.py	2026-10-26 18:35:27
+@@ -11,6 +11,18 @@
+         label = "  North Star\t"
+         self.assertEqual(validate_label(label), label)
+ 
++    def test_rejects_empty_label(self):
++        with self.assertRaises(ValueError):
++            validate_label("")
+ 
++    def test_rejects_whitespace_only_label(self):
++        with self.assertRaises(ValueError):
++            validate_label(" \t\n")
++
++    def test_rejects_non_string_label(self):
++        with self.assertRaises(TypeError):
++            validate_label(None)
++
++
+ if __name__ == "__main__":
+     unittest.main()
+

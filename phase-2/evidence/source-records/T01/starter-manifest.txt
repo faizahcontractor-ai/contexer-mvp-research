@@ -1,0 +1,10 @@
+SHA-256 of common starter files at the start of the A/B runs (each matched across starter, condition A and condition B):
+
+README.md  779e5ac2e2380f12e60de82799ab80e13094d633f4aa2aabd23eecbb3bb17475
+TASK.md  2206178b2657822dd1e926a413a158da1e8a6a41d6ee5272fec89cb3f6ab9375
+shared_client.py  72a66b49dd4631d70f6216174df0a71f7f146538c27678748853a26f9b7b81ad
+tests/test_profile.py  664a46dc2e98919abe0746c7118ecceb93397162c644257f0fd41edd5d5059e7
+tests/test_shared_client.py  a938814e5a682bc5480f0077d441db50def890489470ee6040476a971a75baa4
+tests/__init__.py  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+The initial `profile.py` was identical across all three folders before runs; each agent then changed its own copy. `AGENTS.md` exists only in condition B.

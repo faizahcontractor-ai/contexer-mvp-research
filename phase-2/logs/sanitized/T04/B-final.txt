@@ -1,0 +1,7 @@
+Implemented `normalize_service_url` and expanded tests.
+
+- Removes exactly one trailing path slash without reconstructing the URL.
+- Preserves scheme/authority spelling, query, fragment, and empty `?`/`#` delimiters.
+- Makes no network calls.
+
+Verified with `python3 -m unittest discover -v` (passing).

@@ -1,0 +1,13 @@
+Command: python3 grader/score.py condition-a
+Working directory: contexer-mvp-lab/
+Exit code: 0
+
+functional_exit_code=0
+test_fetch_user_profile_returns_service_payload (tests.test_profile.ProfileTests) ... ok
+test_client_sends_bearer_token_and_retries_once (tests.test_shared_client.SharedClientTests) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.013s
+
+OK
+decision_compliance=PASS

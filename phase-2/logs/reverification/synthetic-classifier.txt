@@ -1,0 +1,13 @@
+Command: ../.venv/bin/python dataset/sample_analysis.py
+Pinned environment: pandas 2.2.3; scikit-learn 1.6.1
+Exit code: 0
+Exact stdout matches archived sample-output.txt: True
+
+seed=42
+pandas=2.2.3 scikit-learn=1.6.1
+split  rows  positive_labels
+train   150               75
+ test    50               25
+test_accuracy=0.940
+confusion_matrix=[[TN, FP], [FN, TP]]
+[[24, 1], [2, 23]]

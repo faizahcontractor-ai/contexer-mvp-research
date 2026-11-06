@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="300" viewBox="0 0 720 300">
+<rect width="100%" height="100%" fill="white"/>
+<text x="20" y="28" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#222">Frozen primary outcome by case</text>
+<text x="185" y="65" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#222">Condition A</text>
+<text x="335" y="65" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#222">Condition B</text>
+<text x="485" y="65" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#222">Condition C</text>
+<text x="24" y="104" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#222">C01</text>
+<rect x="145" y="82" width="118" height="30" rx="4" fill="#2e7d32"/>
+<text x="157" y="102" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="white">PASS</text>
+<rect x="295" y="82" width="118" height="30" rx="4" fill="#2e7d32"/>
+<text x="307" y="102" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="white">PASS</text>
+<rect x="445" y="82" width="118" height="30" rx="4" fill="#9e9e9e"/>
+<text x="457" y="102" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#222">NOT RUN</text>
+<text x="24" y="146" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#222">C02</text>
+<rect x="145" y="124" width="118" height="30" rx="4" fill="#c62828"/>
+<text x="157" y="144" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="white">FAIL</text>
+<rect x="295" y="124" width="118" height="30" rx="4" fill="#2e7d32"/>
+<text x="307" y="144" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="white">PASS</text>
+<rect x="445" y="124" width="118" height="30" rx="4" fill="#9e9e9e"/>
+<text x="457" y="144" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#222">NOT RUN</text>
+<text x="24" y="188" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#222">C03</text>
+<rect x="145" y="166" width="118" height="30" rx="4" fill="#c62828"/>
+<text x="157" y="186" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="white">FAIL</text>
+<rect x="295" y="166" width="118" height="30" rx="4" fill="#2e7d32"/>
+<text x="307" y="186" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="white">PASS</text>
+<rect x="445" y="166" width="118" height="30" rx="4" fill="#9e9e9e"/>
+<text x="457" y="186" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#222">NOT RUN</text>
+<text x="24" y="230" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#222">C04</text>
+<rect x="145" y="208" width="118" height="30" rx="4" fill="#2e7d32"/>
+<text x="157" y="228" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="white">PASS</text>
+<rect x="295" y="208" width="118" height="30" rx="4" fill="#2e7d32"/>
+<text x="307" y="228" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="white">PASS</text>
+<rect x="445" y="208" width="118" height="30" rx="4" fill="#9e9e9e"/>
+<text x="457" y="228" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#222">NOT RUN</text>
+<text x="24" y="272" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#222">C05</text>
+<rect x="145" y="250" width="118" height="30" rx="4" fill="#2e7d32"/>
+<text x="157" y="270" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="white">PASS</text>
+<rect x="295" y="250" width="118" height="30" rx="4" fill="#2e7d32"/>
+<text x="307" y="270" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="white">PASS</text>
+<rect x="445" y="250" width="118" height="30" rx="4" fill="#9e9e9e"/>
+<text x="457" y="270" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#222">NOT RUN</text>
+<text x="24" y="288" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#555">Per-case only; no pooled effect estimate. C is unmeasured.</text>
+</svg>

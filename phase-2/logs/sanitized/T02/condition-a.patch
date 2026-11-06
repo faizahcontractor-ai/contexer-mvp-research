@@ -1,0 +1,27 @@
+--- a/report.py
++++ b/report.py
+@@ -3,4 +3,5 @@
+ 
+ def write_report(path, content: str) -> None:
+     """Write generated report content to the destination path."""
+-    raise NotImplementedError("Implement T02")
++    with open(path, "w", encoding="utf-8") as report_file:
++        report_file.write(content)
+--- a/tests/test_report.py
++++ b/tests/test_report.py
+@@ -14,6 +14,15 @@
+ 
+             self.assertEqual(destination.read_text(encoding="utf-8"), "Report: completed\n")
+ 
++    def test_truncates_trailing_content_when_replacing_report(self):
++        with tempfile.TemporaryDirectory() as directory:
++            destination = Path(directory) / "report.txt"
++            destination.write_text("a much longer old report\n", encoding="utf-8")
++
++            write_report(destination, "new\n")
++
++            self.assertEqual(destination.read_text(encoding="utf-8"), "new\n")
++
+     def test_replaces_existing_report_contents(self):
+         with tempfile.TemporaryDirectory() as directory:
+             destination = Path(directory) / "report.txt"

@@ -1,0 +1,9 @@
+Implemented `normalize_service_url` in [url_normalization.py]([LOCAL_PATH]).
+
+It removes exactly one path-ending slash while preserving query strings, fragments, URL spelling, and avoiding network access. Added coverage for empty query markers and unchanged paths in [tests/test_url_normalization.py]([LOCAL_PATH]).
+
+Verified with:
+
+```bash
+python3 -m unittest discover -v
+```

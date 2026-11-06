@@ -1,0 +1,59 @@
+--- a/report.py
++++ b/report.py
+@@ -1,6 +1,25 @@
+ """Report output functions for the T02 fixture."""
++
++import os
++import tempfile
++from pathlib import Path
+ 
+ 
+ def write_report(path, content: str) -> None:
+-    """Write generated report content to the destination path."""
+-    raise NotImplementedError("Implement T02")
++    """Atomically replace the destination with generated report content."""
++    destination = Path(path)
++    temporary_path = None
++    try:
++        with tempfile.NamedTemporaryFile(
++            mode="w",
++            encoding="utf-8",
++            dir=destination.parent,
++            delete=False,
++        ) as temporary_file:
++            temporary_path = Path(temporary_file.name)
++            temporary_file.write(content)
++
++        os.replace(temporary_path, destination)
++    finally:
++        if temporary_path is not None:
++            temporary_path.unlink(missing_ok=True)
+--- a/tests/test_report.py
++++ b/tests/test_report.py
+@@ -1,6 +1,7 @@
+ import tempfile
+ import unittest
+ from pathlib import Path
++from unittest.mock import patch
+ 
+ from report import write_report
+ 
+@@ -23,6 +24,18 @@
+ 
+             self.assertEqual(destination.read_text(encoding="utf-8"), "new report\n")
+ 
++    def test_failed_replacement_preserves_existing_report_and_cleans_temporary_file(self):
++        with tempfile.TemporaryDirectory() as directory:
++            destination = Path(directory) / "report.txt"
++            destination.write_text("old report\n", encoding="utf-8")
++
++            with patch("report.os.replace", side_effect=OSError("replace failed")):
++                with self.assertRaisesRegex(OSError, "replace failed"):
++                    write_report(destination, "new report\n")
++
++            self.assertEqual(destination.read_text(encoding="utf-8"), "old report\n")
++            self.assertEqual(list(Path(directory).iterdir()), [destination])
++
+ 
+ if __name__ == "__main__":
+     unittest.main()

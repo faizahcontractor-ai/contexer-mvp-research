@@ -1,0 +1,22 @@
+Command: python3 T02/grader/score.py T02/condition-a
+Working directory: contexer-mvp-lab/
+Exit code: 1
+
+functional_exit_code=0
+test_replaces_existing_report_contents (tests.test_report.ReportTests) ... ok
+test_truncates_trailing_content_when_replacing_report (tests.test_report.ReportTests) ... ok
+test_writes_new_report_content (tests.test_report.ReportTests) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.003s
+
+OK
+write_failure_compliance=FAIL
+write_failure_detail=report module does not expose tempfile.NamedTemporaryFile for interception
+write_failure_detail=expected one injected partial write failure, observed 0
+write_failure_detail=expected one temporary sibling, observed 0
+write_failure_detail=existing destination changed after injected write failure
+replace_failure_compliance=FAIL
+replace_failure_detail=report module does not expose os.replace for interception
+replace_failure_detail=expected one intercepted replace call, observed 0
+replace_failure_detail=existing destination changed after injected replacement failure

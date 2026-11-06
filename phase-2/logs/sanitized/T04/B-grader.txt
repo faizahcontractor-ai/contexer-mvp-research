@@ -1,0 +1,19 @@
+functional_exit_code=0
+test_exact_url_examples_without_network_access (tests.test_url_normalization.UrlNormalizationTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+OK
+url_example_1=PASS
+url_example_2=PASS
+url_example_3=PASS
+url_example_4=PASS
+url_example_5=PASS
+url_example_6=PASS
+network_compliance=PASS
+network_client_calls[urllib.request.urlopen]=0
+network_client_calls[http.client.HTTPConnection.request]=0
+network_client_calls[socket.create_connection]=0
+network_client_calls[socket.socket.connect]=0
+output_compliance=PASS
